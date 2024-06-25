@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body{
+  margin: 0;
+  background: red;
+}
+
+.bighero {
+  animation-timing-function: ease-in-out;
+  animation-name: move-around;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-around {
+  0% {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.hiro {
+  animation-timing-function: ease-in-out;
+  animation-name:fadein;
+  animation-iteration-count:infinite;
+  animation-duration: 2s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.message {
+  width: 45%;
+  background: red;
+  color: white;
+  font-size: 45px;
+  padding: 2px 2px;
+  border-radius: 4px;
+  position: fixed;
+  right: 12px;
+  top: 32px;
+  animation: popup 2s;
+  animation-fill-mode: forwrds;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(-200px);
+  }
+  20% {
+    transform: none;
+  }
+  80% {
+    transform: none;
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
